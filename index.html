@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mb-6">
+        <h1>Bài tập JS buổi 5 - extra</h1>
+
+        <!-- Bài 1 -->
+        <div>
+            <h3> Viết chương trình nhập vào thông tin của 1 cá nhân (Họ tên, tổng thu nhập năm, số
+                người phụ thuộc). Tính và xuất thuế thu nhập cá nhân phải trả theo quy định sau: <br>
+                *Thu nhập chịu thuế = Tổng thu nhập năm - 4tr- Số người phụ thuộc * 1.6tr
+            </h3>
+            <div class="form-group">
+                <input id="Name" type="text" class="form-control w-50" placeholder="Nhập họ tên">
+                <input type="number" id="thuNhapNam" class="form-control w-50 my-5"
+                    placeholder="Nhập tổng thu nhập năm">
+                <input type="number" id="nguoiPhuThuoc" class="form-control w-50 my-5"
+                placeholder="Số người phụ thuôc">
+            </div>
+            <button class="btn btn-success" id="btnTinhThue">Tính thuế thu nhập cá nhân</button>
+            <div class="alert alert-success mt-4" id="ketQua_1"></div>
+
+        </div>
+
+        <!-- Bài 2 -->
+        <div>
+            <div class="alert alert-primary">
+            <h3>Viết chương trình tính hóa đơn khách hàng cho một công ty cáp. Có 2 loại khách hàng: <br>
+                Nhà dân và doanh nghiệp. Có 2 mức giá tính tiền cáp:</h3>
+
+                <p>
+                1. Nhà dân:
+                <br>
+                • Phí xử lý hóa đơn: 4.5$
+                <br>
+                • Phí dịch vụ cơ bản: 20.5$
+                <br>
+                • Thuê kênh cao cấp: 7.5$ / kênh
+                <br>
+                2. Doanh nghiệp
+                <br>
+                • Phí xử lý hóa đơn: 15$
+                <br>
+                • Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu, mỗi kết nối thêm 5$ / kết nối
+                <br>
+                • Thuê kênh cao cấp: 50$ / kênh
+                
+            </p>
+            <h3>
+                ❖ Chương trình cho phép nhập vào Mã khách hàng, loại khách hàng, số kết nối, số kênh
+                cao cấp. Nếu chọn loại khách hàng là Doanh nghiệp ô nhập số kết nối sẽ hiện lên, nếu
+                chọn loại khách hàng là nhà dân thì ô nhập kết nối sẽ ẩn đi hoặc disabled
+            </h3>
+        </div>
+            <div class="form-group">
+                <p class="mt-4">1. Chọn loại khách hàng</p>
+                <select id="loaiKH" onchange="disabledInput()">
+                    <option value="doanhnghiep">Doanh nghiệp</option>
+                    <option value="nhadan">Nhà dân</option>
+                  
+                    
+                </select>
+                <p class="mt-4">2. Nhập vào mã khách hàng</p>
+                <input id="maKH" class="form-control w-50">
+                <p class="mt-4">3. Nhập vào số kết nối (đối với doanh nghiệp)</p>
+                <input type="number" id="soketnoi">
+                <p class="mt-4">4. Nhập vào số kênh cao cấp</p>
+                <input type="number" id="sokenhcaocap">
+
+            </div>
+            <button class="btn btn-success my-4" id="btnHoadon">Tính hoá đơn KH</button>
+            <div class="alert alert-success" id="ketQua_2"></div>
+       
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+      
+      
+        <script src="./index.js"></script>
+</body>
+
+</html>
