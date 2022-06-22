@@ -77,9 +77,9 @@ document.getElementById('btnHoadon').onclick = function () {
     var loaiKH = document.getElementById('loaiKH').value;
 
     var hoaDon = 0;
- if (loaiKH= "doanhnghiep") {
+ if (loaiKH === "doanhnghiep") {
     hoaDon = 15 + 75 +5*soKetnoi + 50*soKenh;
- } else if (loaiKH ="nhadan")
+ } else if (loaiKH === "nhadan")
  {
     hoaDon = 7.5 + 20.5 +7.5*soKenh;
  }
